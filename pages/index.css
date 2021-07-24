@@ -1,1 +1,6 @@
 @import url(../vendor/normalize.css);
+@import url(../bloks/root/root.css);
+@import url(../bloks/page/page.css);
+@import url(../bloks/page-container/page-container.css);
+@import url(../bloks/header/header.css);
+@import url(../bloks/header/__logo/header__logo.css);
