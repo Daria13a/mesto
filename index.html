@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
-  <title>Место</title>
-  <meta name="keywords" content="html, css, js">
-  <meta name="author" content="Дарья Абросимова">
-</head>
-<body class="root">
-  <div class="page">
-    <div class="page-container">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Место</title>
+    <meta name="keywords" content="html, css, js">
+    <meta name="author" content="Дарья Абросимова">
+  </head>
+  <body class="root">
+    <div class="page">
       <header class="header">
         <div class="header__logo"></div>
       </header>
-      <div class="main">
-        <div class="profile">
+      <main class="main">
+        <section class="profile">
           <img src="./images/image.jpg" class="profile__avatar" alt="Фото профиля">
           <div class="profile__container">
             <div class="profile__info">
@@ -23,86 +22,87 @@
               <p class="profile__profession">Исследователь океана</p>
             </div>
             <button type="button" class="profile__edit-button page__button-hover">
-              <img src="./images/edit_button.png" class="profile__edit-button-image" alt="Кнопка для редактирования профиля">
+              <img src="./images/edit_button.svg" class="profile__edit-button-image" alt="Кнопка для редактирования профиля">
             </button>
           </div>
           <button type="button" class="profile__add-button page__button-hover">
-          <img src="./images/add_button.png" class="profile__add-button-image" alt="Кнопка для добавления фото">
+          <img src="./images/add_button.svg" class="profile__add-button-image" alt="Кнопка для добавления фото">
           </button>
-        </div>
-        <ul class="elements">
-          <li class="element">
-            <img src="./images/krasnaya_polyana.jpg" class="element__image" alt="Красная Поляна">
-            <div class="element__text">
-              <p class="element__caption">Красная Поляна</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <img src="./images/fiolent.jpg" class="element__image" alt="Мыс Фиолент">
-            <div class="element__text">
-              <p class="element__caption">Мыс Фиолент</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <img src="./images/amber_beach.jpg" class="element__image" alt="Янтарный пляж">
-            <div class="element__text">
-              <p class="element__caption">Янтарный пляж</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <img src="./images/abkhazia.jpg" class="element__image" alt="Абхазия">
-            <div class="element__text">
-              <p class="element__caption">Абхазия</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <img src="./images/dianas_grotto.jpg" class="element__image" alt="Грот Дианы">
-            <div class="element__text">
-              <p class="element__caption">Грот Дианы</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <img src="./images/grand_canyon.jpg" class="element__image" alt="Большой каньон">
-            <div class="element__text">
-              <p class="element__caption">Большой каньон</p>
-              <button type="button" class="element__like-button element__like-button_active page__button-hover">
-                <img src="./images/like.svg" class="element__like">
-              </button>
-            </div>
-          </li>
-        </ul>
-      </div>
+        </section>
+        <section>
+          <ul class="elements">
+            <li class="element">
+              <img src="./images/krasnaya_polyana.jpg" class="element__image" alt="Красная Поляна">
+              <div class="element__text">
+                <p class="element__caption">Красная Поляна</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+            <li class="element">
+              <img src="./images/fiolent.jpg" class="element__image" alt="Мыс Фиолент">
+              <div class="element__text">
+                <p class="element__caption">Мыс Фиолент</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+            <li class="element">
+              <img src="./images/amber_beach.jpg" class="element__image" alt="Янтарный пляж">
+              <div class="element__text">
+                <p class="element__caption">Янтарный пляж</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+            <li class="element">
+              <img src="./images/abkhazia.jpg" class="element__image" alt="Абхазия">
+              <div class="element__text">
+                <p class="element__caption">Абхазия</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+            <li class="element">
+              <img src="./images/dianas_grotto.jpg" class="element__image" alt="Грот Дианы">
+              <div class="element__text">
+                <p class="element__caption">Грот Дианы</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+            <li class="element">
+              <img src="./images/grand_canyon.jpg" class="element__image" alt="Большой каньон">
+              <div class="element__text">
+                <p class="element__caption">Большой каньон</p>
+                <button type="button" class="element__like-button element__like-button_active">
+                  <img src="./images/like.svg" class="element__like" alt="Лайк">
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
       </footer>
       <div class="popup">
-        <form class="popup__container">
+        <form class="popup__container" name="edit-profile">
           <button type="button" class="popup__close">
-            <img src="images/Close Icon.png" class="popup__close-image page__button-hover" alt="Кнопка закрытия формы">
+            <img src="images/Close_Icon.svg" class="popup__close-image page__button-hover" alt="Кнопка закрытия формы">
           </button>
           <h2 class="popup__title">Редактировать профиль</h2>
           <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
           <input type="text" placeholder="О себе" class="popup__text popup__text_type_profession">
-          <button type="submit" class="popup__save page__button-hover">Сохранить</button>
+          <button type="submit" class="popup__save">Сохранить</button>
         </form>
       </div>
     </div>
-  </div>
-  <script src="./bloks/popup/popup.js" defer></script>
-</body>
+    <script src="./blocks/popup/popup.js" defer></script>
+  </body>
 </html>
