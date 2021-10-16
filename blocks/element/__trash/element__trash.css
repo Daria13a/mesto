@@ -1,0 +1,14 @@
+.element__trash {
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  top: 18px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+}
