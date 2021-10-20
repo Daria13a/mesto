@@ -38,7 +38,6 @@
 @import url(../blocks/popup/__text/_type/popup__text_type_profession.css);
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup-card-zoom/popup-card-zoom.css);
-@import url(../blocks/popup-card-zoom/_opened/popup-card-zoom__opened.css);
 @import url(../blocks/popup-card-zoom/__image/popup-card-zoom__image.css);
 @import url(../blocks/popup-card-zoom/__caption/popup-card-zoom__caption.css);
 @import url(../blocks/popup-card-zoom/__container/popup-card-zoom__container.css);

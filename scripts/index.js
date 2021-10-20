@@ -26,12 +26,12 @@ const initialCards = [
 ];
 
 const popupOpenBtn = document.querySelector('.profile__edit-button');
-const popup = document.querySelector('.popup');
-const popupCloseBtn = popup.querySelector('.popup__close-button');
-const popupForm = popup.querySelector('#edit-profile');
-const nameInput = popup.querySelector('.popup__text_type_name');
+const profilePopup = document.querySelector('.profile_popup');
+const popupCloseBtn = profilePopup.querySelector('.popup__close-button');
+const popupForm = profilePopup.querySelector('#edit-profile');
+const nameInput = profilePopup.querySelector('.popup__text_type_name');
 const profileName = document.querySelector('.profile__name');
-const jobInput = popup.querySelector('.popup__text_type_profession');
+const jobInput = profilePopup.querySelector('.popup__text_type_profession');
 const profileProfession = document.querySelector('.profile__profession');
 const cardAddBtn = document.querySelector('.profile__add-button');
 const popupCardAdd = document.querySelector('.popup-card-add');
@@ -44,10 +44,11 @@ const cardTemplate = document.querySelector('.element-template').content;
 const popupZoom = document.querySelector('.popup-card-zoom');
 const popupZoomCloseBtn = popupZoom.querySelector('.popup__close-button');
 
-function addCard(card) {
+function createCard(card) {
   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
   cardElement.querySelector('.element__caption').textContent = card.name;
   cardElement.querySelector('.element__image').src = card.link;
+  cardElement.querySelector('.element__image').alt = card.name;
 
   cardElement.querySelector('.element__like-button').addEventListener('click', function (event) {
     event.target.classList.toggle('element__like-button_active');
@@ -61,16 +62,23 @@ function addCard(card) {
     togglePopup(popupZoom);
 
     popupZoom.querySelector('.popup-card-zoom__image').src = card.link;
+    popupZoom.querySelector('.popup-card-zoom__image').alt = card.name;
     popupZoom.querySelector('.popup-card-zoom__caption').textContent = card.name;
   });
+  return cardElement;
+
+}
+
+function addCard(card) {
+  const cardElement = createCard(card);
 
   cardsList.prepend(cardElement);
 };
 
 initialCards.forEach(addCard);
 
-function togglePopup (p) {
-  p.classList.toggle('popup_opened');
+function togglePopup (popup) {
+  popup.classList.toggle('popup_opened');
 
 }
 
@@ -78,7 +86,7 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
-  togglePopup(popup);
+  togglePopup(profilePopup);
 }
 
 function formSubmitHandlerAddCard (e) {
@@ -94,7 +102,7 @@ function formSubmitHandlerAddCard (e) {
 }
 
 popupOpenBtn.addEventListener('click', () => {
-  togglePopup(popup);
+  togglePopup(profilePopup);
   nameInput.value = profileName.textContent;
   jobInput.value = profileProfession.textContent;
 
@@ -105,7 +113,7 @@ cardAddBtn.addEventListener('click', () => {
 });
 
 popupCloseBtn.addEventListener('click', () => {
-  togglePopup(popup);
+  togglePopup(profilePopup);
 });
 
 popupCardAddCloseBtn.addEventListener('click', () => {
