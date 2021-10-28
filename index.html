@@ -44,9 +44,11 @@
             <img src="images/Close_Icon.svg" class="popup__close-image page__button-hover" alt="Кнопка закрытия формы">
           </button>
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form"  id="edit-profile">
-            <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
-            <input type="text" placeholder="О себе" class="popup__text popup__text_type_profession">
+          <form class="popup__form"  id="form-profile" novalidate>
+            <input type="text" id="name-input" placeholder="Имя" class="popup__input popup__input_type_name" minlength="2" maxlength="40" required>
+            <span class="popup__input-error name-input-error"></span>
+            <input type="text" id="profession-input" placeholder="О себе" class="popup__input popup__input_type_profession" minlength="2" maxlength="200" required>
+            <span class="popup__input-error profession-input-error"></span>
             <button type="submit" class="popup__save-button">Сохранить</button>
           </form>
         </div>
@@ -57,9 +59,11 @@
             <img src="images/Close_Icon.svg" class="popup__close-image page__button-hover" alt="Кнопка закрытия формы">
           </button>
           <h2 class="popup__title">Новое место</h2>
-          <form class="popup__form" id="add-card">
-            <input type="text" placeholder="Название" class="popup__text popup__text_type_title">
-            <input type="text" placeholder="Ссылка на картинку" class="popup__text popup__text_type_url">
+          <form class="popup__form" id="add-card" novalidate>
+            <input type="text" id="title-input" placeholder="Название" class="popup__input popup__input_type_title" required minlength="2" maxlength="30">
+            <span class="popup__input-error title-input-error"></span>
+            <input type="url" id="url-input" placeholder="Ссылка на картинку" class="popup__input popup__input_type_url" required>
+            <span class="popup__input-error url-input-error"></span>
             <button type="submit" class="popup__save-button">Создать</button>
           </form>
         </div>
@@ -89,7 +93,7 @@
         </button>
       </li>
     </template>
-    <script src="./scripts/index.js" defer></script>
-
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>
