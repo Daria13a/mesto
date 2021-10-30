@@ -5,11 +5,3 @@
   opacity: 0.15;
   cursor: default;
 }
-
-.popup__save-button:hover {
-  background: #E5E5E5;
-  color: #000;
-  border: 1px solid #000;
-  opacity: 0.15;
-
-}
